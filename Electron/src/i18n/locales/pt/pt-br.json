@@ -1,5 +1,11 @@
 {
-    "translation": {
-        "Teste": "Teste"
-    }
+  "translation": {
+    "monitoring": "Monitorando",
+    "greeting": "Olá, {{name}}",
+    "subGreeting": "Fica sussa!, estamos monitorando seu uso de rede.",
+    "totalDownloadSize": "tamanho total de download utilizado",
+    "totalUploadSize": "tamanho total de upload utilizado",
+    "waiting": "Aguardando",
+    "clickToConnect": "Clique no botão ao lado para conectar ao servidor para monitorarmos seu uso de dados."
+  }
 }

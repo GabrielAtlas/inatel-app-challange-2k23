@@ -10,15 +10,11 @@ const createWindow = () => {
     resizable: false,
     frame: false,
     roundedCorners: true,
-    backgroundColor: '#1F1F1F',
-    title: 'LaraBroker',
+    backgroundColor: 'transparent',
+    title: 'iMeeter',
     titleBarStyle: 'hidden',
     maximizable: false,
-    titleBarOverlay: {
-      color: '#1F1F1F',
-      symbolColor: '#b0b0b0'
-    },
-    darkTheme: true,
+    darkTheme: false,
     webPreferences: {
       preload: path.join(__dirname, 'preloader.js'),
       webSecurity: false,

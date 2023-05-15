@@ -31,15 +31,18 @@
   "dependencies": {
     "dayjs": "^1.11.5",
     "electron-is-dev": "^2.0.0",
+    "i18next": "^22.4.15",
     "node-window-rendering": "https://slobs-node-window-rendering.s3-us-west-2.amazonaws.com/node-window-rendering-1.0.12-osx.tar.gz",
     "obs-studio-node": "https://s3-us-west-2.amazonaws.com/obsstudionodes3.streamlabs.com/osn-0.9.5-release-osx.tar.gz",
     "react": "^18.2.0",
     "react-circular-progressbar": "^2.1.0",
     "react-dom": "^18.2.0",
+    "react-i18next": "^12.2.2",
     "react-icons": "^4.4.0",
     "react-router-dom": "^6.4.2",
     "react-scripts": "5.0.1",
     "rxjs": "^7.5.7",
+    "socket.io-client": "^4.6.1",
     "typescript": "^4.8.4",
     "uuid": "^9.0.0"
   },

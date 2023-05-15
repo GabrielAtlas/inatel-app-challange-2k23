@@ -3,7 +3,7 @@ module.exports = {
   content: ['./src/**/*.tsx', './public/index.html'],
   theme: {
     fontFamily: {
-      sans: ['Inter', 'sans-serif']
+      sans: ['Urbanist', 'sans-serif']
     },
     extend: {
       screens: {
