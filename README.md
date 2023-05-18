@@ -1,6 +1,6 @@
 # NETER
 
-![NETER Logo](https://i.imgur.com/CBeKYto.png)
+![NETER Logo](https://i.imgur.com/p36jejQ.png)
 
 NETER é um aplicativo de monitoração de rede desenvolvido em Electron. Ele permite obter informações sobre os processos em execução no seu computador e medir a taxa de upload e download utilizada por cada aplicativo. Além disso, o NETER exibe uma lista dos protocolos mais utilizados na rede.
 
