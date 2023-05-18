@@ -5,12 +5,12 @@ const path = require('path')
 
 const createWindow = () => {
   const win = new BrowserWindow({
-    width: 960,
-    height: 640,
+    width: 1040,
+    height: 744,
     resizable: false,
     frame: false,
     roundedCorners: true,
-    backgroundColor: 'transparent',
+    backgroundColor: '#14213D',
     title: 'iMeeter',
     titleBarStyle: 'hidden',
     maximizable: false,

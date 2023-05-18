@@ -3,7 +3,8 @@ module.exports = {
   content: ['./src/**/*.tsx', './public/index.html'],
   theme: {
     fontFamily: {
-      sans: ['Urbanist', 'sans-serif']
+      sans: ['Inter', 'sans-serif'],
+      sora: ['Sora']
     },
     extend: {
       screens: {

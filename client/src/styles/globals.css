@@ -4,31 +4,6 @@
 
 html,
 body {
-  background: linear-gradient(-45deg, #335ef7, #5f82ff, #ff7a00, #fb9504);
-  background-size: 400% 400%;
   width: 100vw;
   height: 100vh;
-  animation: gradientBack 4s ease forwards;
-}
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 100% 100%;
-  }
-}
-
-@keyframes gradientBack {
-  0% {
-    background-position: 100% 100%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.gradient-run {
-  animation: gradient 4s ease forwards;
 }
