@@ -1,6 +1,29 @@
 {
-  "translation": {
-    "monitoring": "Monitorando",
-    "authenticatedAs": "Autenticado como {{name}}"
+  "assistant": "Assistente Guardião",
+  "authenticatedAs": "Autenticado como <strong>{{name}}</strong>",
+
+  "hero": {
+    "you": "You",
+    "heading": "Tudo certo,",
+    "subHeading": "sua rede está",
+    "secure": "segura"
+  },
+
+  "analytics": {
+    "receivedData": "Dados recebidos",
+    "sentData": "Dados enviados",
+    "connectedApps": "Apps conectados",
+    "protocolsUsed": "Protocolos utilizados",
+    "threatsDetected": "Ameaças detectadas",
+    "report": "Reportar",
+    "reportDesc": "Encontrou algo suspeito?",
+
+    "dataConsumption": "Consumo"
+  },
+
+  "userSettings": {
+    "settings": "Configurações",
+    "languageSelected": "Selecionado",
+    "logout": "Sair"
   }
 }

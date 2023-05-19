@@ -5,12 +5,12 @@ import DashLayout from '../../layouts/DashLayout'
 
 const Dashboard = () => {
   return (
-    <DataContextProvider>
-      <DashLayout>
+    <DashLayout>
+      <DataContextProvider>
         <DashHero />
         <DashContent />
-      </DashLayout>
-    </DataContextProvider>
+      </DataContextProvider>
+    </DashLayout>
   )
 }
 

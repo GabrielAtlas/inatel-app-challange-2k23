@@ -1,5 +1,7 @@
 import { useState, useEffect, useContext } from 'react'
 
+import { useTranslation } from 'react-i18next'
+
 import { Host, ProcessData } from '../../@types/types'
 import { DataContext } from '../../contexts/DataContext'
 
@@ -9,6 +11,8 @@ var Graph = require('p2p-graph')
 const DashHero = () => {
   const { responseData } = useContext(DataContext)
   const [graph, setGraph] = useState<typeof Graph>()
+
+  const { t } = useTranslation()
 
   useEffect(() => {
     const graph = new Graph('.graph-root')
@@ -20,7 +24,7 @@ const DashHero = () => {
     graph.add({
       id: 'peer1',
       me: true,
-      name: 'Você'
+      name: 'Você' // translate fix ?
     })
     setGraph(graph)
   }, [])
@@ -52,10 +56,11 @@ const DashHero = () => {
     <div className="w-100 flex h-64 mt-6 bg-[#101A30]/100 rounded-3xl px-8">
       <div className="text-white flex flex-1 items-end h-full pb-12">
         <h1 className="text-4xl text-bold font-sora">
-          Tudo certo,
+          {t('hero.heading')}
           <br />{' '}
           <b>
-            sua rede está <span className="text-[#14F195]">segura</span>.
+            {t('hero.subHeading')}{' '}
+            <strong className="text-[#14F195]">{t('hero.secure')}</strong>.
           </b>
         </h1>
       </div>

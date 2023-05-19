@@ -3,9 +3,16 @@ type InfoCardProps = {
   icon: any
   info: string
   report?: boolean
+  reportText?: string | null
 }
 
-const InfoCard: React.FC<InfoCardProps> = ({ title, icon, info, report }) => {
+const InfoCard: React.FC<InfoCardProps> = ({
+  title,
+  icon,
+  info,
+  report,
+  reportText
+}) => {
   const matchResult = info.match(/(\d+(?:\.\d+)?)(\D+)/)
 
   return (
@@ -26,9 +33,7 @@ const InfoCard: React.FC<InfoCardProps> = ({ title, icon, info, report }) => {
       ) : (
         <>
           {report && (
-            <span className="text-xs	text-[#808080]">
-              Encontrou algo suspeito?
-            </span>
+            <span className="text-xs	text-[#808080]">{reportText}</span>
           )}
           <h3 className={`text-white ${report ? 'text-3xl' : 'text-5xl'}`}>
             {info}

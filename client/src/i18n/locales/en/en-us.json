@@ -1,5 +1,29 @@
 {
-    "translation": {
-        "Teste": "Test"
-    }
+  "assistant": "Guardian Assistant",
+  "authenticatedAs": "Authenticated as <strong>{{name}}</strong>",
+
+  "hero": {
+    "you": "You",
+    "heading": "All very well,",
+    "subHeading": "your network is",
+    "secure": "secure"
+  },
+
+  "analytics": {
+    "receivedData": "Data received",
+    "sentData": "Data sent",
+    "connectedApps": "Connected Apps",
+    "protocolsUsed": "Protocols used",
+    "threatsDetected": "Threats detected",
+    "report": "Report",
+    "reportDesc": "Found anything suspicious?",
+
+    "dataConsumption": "Data Consumption"
+  },
+
+  "userSettings": {
+    "settings": "Settings",
+    "languageSelected": "Selected",
+    "logout": "Logout"
+  }
 }
