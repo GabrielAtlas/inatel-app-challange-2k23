@@ -28,7 +28,7 @@ export const Header = () => {
       </div>
       <img src="/assets/logo-neter.svg" alt="Neter" />
       <div className="w-50 ml-8 text-xs bg-white/5 py-2 px-3 text-white flex gap-2 items-center rounded-full">
-        <span className="flex w-6 h-6 justify-center items-center bg-gradient-to-r from-[#6D43C5] to-[#FCA311] rounded-full">
+        <span className="flex w-6 h-6 font-sora justify-center items-center bg-gradient-to-r from-[#6D43C5] to-[#FCA311] rounded-full">
           J
         </span>
         Autenticado como <b>João</b>

@@ -1,3 +1,4 @@
+import DashContent from '../../components/DashContent'
 import DashHero from '../../components/DashHero'
 import DashLayout from '../../layouts/DashLayout'
 import { connect } from '../../libs/SocketApi'
@@ -17,6 +18,7 @@ const Dashboard = () => {
   return (
     <DashLayout>
       <DashHero />
+      <DashContent />
     </DashLayout>
   )
 }

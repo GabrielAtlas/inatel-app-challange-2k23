@@ -7,3 +7,7 @@ body {
   width: 100vw;
   height: 100vh;
 }
+
+.graph-root svg .text {
+  fill: #969696;
+}
