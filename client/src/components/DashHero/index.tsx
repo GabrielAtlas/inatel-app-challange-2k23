@@ -1,12 +1,17 @@
-import { useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
+
+import { Host, ProcessData } from '../../@types/types'
+import { DataContext } from '../../contexts/DataContext'
 
 // eslint-disable-next-line no-var
 var Graph = require('p2p-graph')
 
 const DashHero = () => {
+  const { responseData } = useContext(DataContext)
+  const [graph, setGraph] = useState<typeof Graph>()
+
   useEffect(() => {
     const graph = new Graph('.graph-root')
-
     graph.on('select', function (id: any) {
       console.log(id + ' selected!')
     })
@@ -17,32 +22,31 @@ const DashHero = () => {
       me: true,
       name: 'Você'
     })
-    graph.add({
-      id: 'peer2',
-      name: '65.168.42.129'
-    })
-    graph.add({
-      id: 'peer3',
-      name: '122.171.23.156'
-    })
-    graph.add({
-      id: 'peer4',
-      name: '95.317.02.98'
-    })
-    graph.add({
-      id: 'peer5',
-      name: '188.217.190.86'
-    })
-    graph.add({
-      id: 'peer6',
-      name: '91.237.27.81'
-    })
-    graph.connect('peer1', 'peer2')
-    graph.connect('peer1', 'peer3')
-    graph.connect('peer1', 'peer4')
-    graph.connect('peer1', 'peer5')
-    graph.connect('peer1', 'peer6')
+    setGraph(graph)
   }, [])
+
+  useEffect(() => {
+    if (graph && graph.list().length < 2) {
+      responseData
+        .reduce((hosts: string[], processData: ProcessData) => {
+          const hostTraffic = processData.host_traffic.map(
+            (host: Host) => host.host
+          )
+          return [...hosts, ...hostTraffic]
+        }, [])
+        .slice(0, 5)
+        .forEach((host, index) => {
+          const hostId = `peer${index + 2}`
+          graph.add({
+            id: hostId,
+            name: host
+          })
+
+          graph.connect('peer1', hostId)
+        })
+      console.log(graph.list().length)
+    }
+  }, [graph, responseData])
 
   return (
     <div className="w-100 flex h-64 mt-6 bg-[#101A30]/100 rounded-3xl px-8">

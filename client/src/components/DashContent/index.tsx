@@ -1,14 +1,21 @@
+import { useContext } from 'react'
+
 import {
   FiArrowDownLeft,
   FiArrowUpRight,
   FiBox,
-  FiCpu,
+  FiCloudDrizzle,
+  FiCrosshair,
   FiMeh
 } from 'react-icons/fi'
 
+import { DataContext } from '../../contexts/DataContext'
 import InfoCard from '../InfoCard'
 
 const DashContent = () => {
+  const { responseData, totalDownloadDataReceived, totalUploadDataReceived } =
+    useContext(DataContext)
+
   return (
     <div className="flex gap-3 mt-8">
       <div id="left-column" className="w-full">
@@ -22,19 +29,19 @@ const DashContent = () => {
           <InfoCard
             title="Dados recebidos"
             icon={<FiArrowDownLeft size={32} color="#00FFA3" />}
-            info="1.2gb"
+            info={totalDownloadDataReceived}
           />
         </div>
         <div id="bottom-left-cards" className="flex gap-2 mt-2">
           <InfoCard
             title="Apps conectados"
             icon={<FiBox size={32} color="#FCA311" />}
-            info="14"
+            info={responseData.length.toString()}
           />
           <InfoCard
             title="Dados enviados"
             icon={<FiArrowUpRight size={32} color="#00FFA3" />}
-            info="763mb"
+            info={totalUploadDataReceived}
           />
         </div>
       </div>
@@ -44,8 +51,8 @@ const DashContent = () => {
         </h3>
         <div id="top-right-cards" className="flex gap-2">
           <InfoCard
-            title="Processos ativos"
-            icon={<FiCpu size={32} color="#0085FF" />}
+            title="Protocolos utilizados"
+            icon={<FiCloudDrizzle size={32} color="#0085FF" />}
             info="59"
           />
           <InfoCard
@@ -56,13 +63,14 @@ const DashContent = () => {
         </div>
         <div id="bottom-right-cards" className="flex gap-2 mt-2">
           <div className="w-full max-w-[240px]"></div>
-          {/*
+          {
             <InfoCard
-            title="Encontrou algo suspeito?"
-            icon={<FiCrosshair size={32} color="#FA7429" />}
-            info="Reportar"
-          />
-          */}
+              title="Encontrou algo suspeito?"
+              icon={<FiCrosshair size={32} color="#FA7429" />}
+              info="Reportar"
+              report
+            />
+          }
         </div>
       </div>
     </div>

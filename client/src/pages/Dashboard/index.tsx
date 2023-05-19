@@ -1,25 +1,16 @@
 import DashContent from '../../components/DashContent'
 import DashHero from '../../components/DashHero'
+import { DataContextProvider } from '../../contexts/DataContext'
 import DashLayout from '../../layouts/DashLayout'
-import { connect } from '../../libs/SocketApi'
 
 const Dashboard = () => {
-  const initialize = () => {
-    connect(
-      () => {
-        console.log('conectado com websocket')
-      },
-      (data: any) => {
-        console.log(data)
-      }
-    )
-  }
-
   return (
-    <DashLayout>
-      <DashHero />
-      <DashContent />
-    </DashLayout>
+    <DataContextProvider>
+      <DashLayout>
+        <DashHero />
+        <DashContent />
+      </DashLayout>
+    </DataContextProvider>
   )
 }
 

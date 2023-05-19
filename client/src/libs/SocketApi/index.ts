@@ -10,6 +10,6 @@ export function connect(connectCallback: any, onUpdate: any) {
 
     socket.on('data', onUpdate)
   } catch (err) {
-    return undefined
+    console.log(err)
   }
 }
